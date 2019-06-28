@@ -93,6 +93,7 @@ class LinkList extends Component {
         votedLink.votes = createVote.link.votes
       
         store.writeQuery({ query: FEED_QUERY, data })
+        this.forceUpdate()
       }
 
       _subscribeToNewLinks = subscribeToMore => {
